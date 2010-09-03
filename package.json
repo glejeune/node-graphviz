@@ -1,0 +1,10 @@
+{
+  "name" : "node-graphviz",
+  "version" : "0.0.1",
+  "author" : "Gregoire Lejeune <gregoire.lejeune@free.fr>",
+  "description" : "Node.js interface to the GraphViz graphing tool",
+  "keywords" : ["graphviz", "dot"],
+  "engines" : ["node"],
+  "directories" : { "lib" : "lib" },
+  "main" : "lib/graphviz"
+}
