@@ -2,7 +2,7 @@
 
 Copyright (C) 2010 Gregoire Lejeune
 
-* Sources : http://github.com/glejeune/Ruby-Graphviz
+* Sources : http://github.com/glejeune/node-graphviz
 
 == DESCRIPTION
 
