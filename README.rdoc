@@ -58,6 +58,12 @@ Or (one day) :
 
 You also need to install GraphViz[http://www.graphviz.org]
 
+== DOCUMENTATION
+
+Install node-jake[http://github.com/mde/node-jake] and dox[http://github.com/visionmedia/dox] then run 
+
+  jake doc && open documentation.html
+
 == LICENCES
 
 Copyright (c) 2010 Gregoire Lejeune <gregoire.lejeune@free.fr>
