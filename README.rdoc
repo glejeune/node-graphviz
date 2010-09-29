@@ -14,6 +14,8 @@ Interface to the GraphViz graphing tool
 
 == CHANGELOG
 
+=== 0.0.3 :
+
 === 0.0.2 :
 * Added the ability to render in-memory (without writing to the filesystem) (By Mathieu Ravaux)
 * Rewrite output method
@@ -26,7 +28,7 @@ Interface to the GraphViz graphing tool
 A basic example
 
   var sys = require('sys'),
-    graphviz = require('node-graphviz/lib/graphviz');
+    graphviz = require('graphviz');
 
   // Create digraph G
   var g = graphviz.digraph("G");
@@ -56,7 +58,7 @@ A basic example
   $ cd ~/.node_libraries
   $ git clone git://github.com/glejeune/node-graphviz.git
 
-Or (one day) :
+Or :
 
   $ npm install node-graphviz
 

@@ -1,6 +1,6 @@
 {
   "name" : "graphviz",
-  "version" : "0.0.2",
+  "version" : "0.0.3",
   "author" : { 
 		"name" : "Gregoire Lejeune",
 		"mail" : "gregoire.lejeune@free.fr"
