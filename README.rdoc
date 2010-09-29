@@ -16,7 +16,6 @@ Interface to the GraphViz graphing tool
 
 === 0.0.2 :
 * Added the ability to render in-memory (without writing to the filesystem) (By Mathieu Ravaux)
-* Add node-temp (http://github.com/bruce/node-temp) dependency
 * Rewrite output method
 
 === 0.0.1 :
