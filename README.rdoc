@@ -16,6 +16,9 @@ Interface to the GraphViz graphing tool
 
 === 0.0.3 :
 
+* Add attributs to addNode and addEdge
+* Add parser (see tests/parse.js)
+
 === 0.0.2 :
 * Added the ability to render in-memory (without writing to the filesystem) (By Mathieu Ravaux)
 * Rewrite output method
@@ -34,8 +37,7 @@ A basic example
   var g = graphviz.digraph("G");
 
   // Add node (ID: Hello)
-  var n1 = g.addNode( "Hello" );
-  n1.set( "color", "blue" );
+  var n1 = g.addNode( "Hello", {"color" : "blue"} );
   n1.set( "style", "filled" );
 
   // Add node (ID: World)
