@@ -1,9 +1,19 @@
 {
   "name" : "node-graphviz",
-  "version" : "0.0.1",
+  "version" : "0.0.2",
   "author" : "Gregoire Lejeune <gregoire.lejeune@free.fr>",
   "description" : "Node.js interface to the GraphViz graphing tool",
+  "homepage" : "http://algorithmique.net/",
+  "contributors" : [ 
+    "Gregoire Lejeune (http://algorithmique.net)",
+    "Mathieu Ravaux (http://mathieuravaux.com)"
+  ],
+  "repository" : { 
+    "type" : "git",
+	  "url" : "http://github.com/glejeune/node-graphviz.git"
+	}
   "keywords" : ["graphviz", "dot"],
+  "dependencies": { "temp": ">= 0.2.0" },
   "engines" : ["node"],
   "directories" : { "lib" : "lib" },
   "main" : "lib/graphviz"

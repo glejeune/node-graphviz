@@ -57,5 +57,4 @@ g.getNode("start").set( "shape", "Mdiamond" );
 g.getNode("end").set( "shape", "Msquare" );
 // }
 
-console.log( g.to_dot() );
 g.output( "png", "cluster.png" ); 

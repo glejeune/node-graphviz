@@ -16,8 +16,5 @@ g.addNode( "World" );
 var e = g.addEdge( n1, "World" );
 e.set( "color", "red" );
 
-// Print the dot script
-console.log( g.to_dot() ); 
-
 // Generate a PNG output
 g.output( "png", "hello_world.png" );

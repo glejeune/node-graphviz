@@ -29,5 +29,4 @@ g.addEdge( clusterC, clusterB )
 // }
 
 g.use = "fdp"
-console.log( g.to_dot() );
 g.output( "png", "fdpclust.png" ); 

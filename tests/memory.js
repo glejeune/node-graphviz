@@ -16,7 +16,12 @@ g.addNode( "World" );
 var e = g.addEdge( n1, "World" );
 e.set( "color", "red" );
 
-// Generate a PNG output
-g.render( "png", function(render) {
+// Generate a dot output in-memory
+g.render( "dot", function(render) {
+	console.log( "-----------------" )
 	console.log( render );
+	console.log( "-----------------" )
 } );
+
+// Generate a PNG output in-file
+g.output( "png", "memory.png" );
