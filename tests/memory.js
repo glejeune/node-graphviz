@@ -17,10 +17,8 @@ var e = g.addEdge( n1, "World" );
 e.set( "color", "red" );
 
 // Generate a dot output in-memory
-g.render( "dot", function(render) {
-	console.log( "-----------------" )
-	console.log( render );
-	console.log( "-----------------" )
+g.render( "png", function(render) {
+	process.stdout.write( render );
 } );
 
 // Generate a PNG output in-file
