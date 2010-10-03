@@ -16,7 +16,7 @@
     "url" : "http://github.com/glejeune/node-graphviz.git"
   },
   "keywords" : ["graphviz", "dot"],
-  "engines" : ["node"],
+  "engines" : ["node >= 0.2.2"],
   "directories" : { "lib" : "./lib" },
   "main" : "lib/graphviz"
 }
