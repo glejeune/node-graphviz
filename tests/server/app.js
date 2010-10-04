@@ -1,25 +1,32 @@
-var app = require('express').createServer();
+var express = require('express'),
+	app = express.createServer(),
+	temp = require('temp'),
+	fs = require('fs');
 
 var sys = require('sys'),
 	graphviz = require('graphviz');
 
 app.set('views', __dirname + '/views');
+app.configure(function(){ 
+	app.use(express.bodyDecoder());
+})
 
 app.get('/', function(req, res){
     res.render('index.ejs', {});
 });
 
-app.get('/image.png', function(req,res){
-	var g = graphviz.digraph("G");
-	var n1 = g.addNode( "Hello" );
-	n1.set( "color", "red" );
-	n1.set( "style", "filled" );
-	g.addNode( "World" );
-	var e = g.addEdge( n1, "World" );
-	e.set( "color", "red" );
-	g.render( "png", function(render) {
-		res.send(render, { 'Content-Type': 'image/png' })
-	} );
+app.post('/test', function(req,res){
+	temp.open('dotGraph', function(err, info) {
+	  fs.write(info.fd, req.body.data);
+	  fs.close(info.fd, function(err) {
+			graphviz.parse( info.path, function(graph) {
+				graph.render( "png", function(render) {
+					img = '<img src="data:image/png;base64,'+render.toString("base64")+'"/>'
+					res.send(img)
+				});
+			});
+	  });
+	});
 })
 
 app.listen(3000);
