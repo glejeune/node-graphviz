@@ -2,18 +2,28 @@
 
 <table>
   <tr><td>
-    <textarea id="dot" cols="60" rows="20"></textarea>
+		<p>Enter your dot code :</p>
+    <textarea id="dot" cols="60" rows="20"></textarea><br />
+		<input id="button" type="button" value="Generate" /><br />
+		<p>Or give me a script URL :<br/><small>Try http://dl.dropbox.com/u/72629/cluster.dot</p>
+		<input id="file" type="text" size="50"/>
+		<input id="bouton" type="button" value="Let see!" /><br />
   </td><td>
     <div id="result"></div>
   </td></tr>
 </table>
 
-<input id="button" type="button" value="Generate" />
-
-
 <script type="text/javascript">
   $('#button').click(function() {
     $.post('test', { data: $('#dot').val() }, function(data) {
+      $('#result').html(data);
+    });
+  });
+</script>
+
+<script type="text/javascript">
+  $('#bouton').click(function() {
+    $.get('draw/'+$('#file').val(), function(data) {
       $('#result').html(data);
     });
   });
