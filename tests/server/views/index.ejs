@@ -1,21 +1,21 @@
 <h1>dotGraph</h1>
 
 <table>
-	<tr><td>
-		<textarea id="dot" cols="60" rows="20"></textarea>
-	</td><td>
-		<div id="result"></div>
-	</td></tr>
+  <tr><td>
+    <textarea id="dot" cols="60" rows="20"></textarea>
+  </td><td>
+    <div id="result"></div>
+  </td></tr>
 </table>
 
 <input id="button" type="button" value="Generate" />
 
 
 <script type="text/javascript">
-	$('#button').click(function() {
-  	$.post('test', { data: $('#dot').val() }, function(data) {
-		  $('#result').html(data);
-		});
-	});
+  $('#button').click(function() {
+    $.post('test', { data: $('#dot').val() }, function(data) {
+      $('#result').html(data);
+    });
+  });
 </script>
 
