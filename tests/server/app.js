@@ -1,48 +1,66 @@
+var fs = require('fs');
+var sys = require('sys');
+var http = require('http');
+var url = require('url');
+
+// npm install express
 var express = require('express'),
-  app = express.createServer(),
-  temp = require('temp'),
-  fs = require('fs');
+  app = express.createServer();
+// nom install temp
+var temp = require('temp');
+// npm install graphviz
+var graphviz = require('../../lib/graphviz');
+// npm install jsmin
+var jsmin = require('jsmin').jsmin;
 
-var sys = require('sys'),
-  graphviz = require('../../lib/graphviz');
-
-var http = require('http'),
-  url = require('url');
+// Configuration --------------------------------------------------------------
 
 app.set('views', __dirname + '/views');
 app.configure(function(){ 
   app.use(express.bodyDecoder());
+  app.use(express.staticProvider(__dirname + '/static'));
 })
+
+// Site -----------------------------------------------------------------------
 
 app.get('/', function(req, res){
     res.render('index.ejs', {});
 });
 
-app.post('/test', function(req,res){
-  temp.open('dotGraph', function(err, info) {
-    fs.write(info.fd, req.body.data);
-    fs.close(info.fd, function(err) {
-      graphviz.parse( info.path, function(graph) {
-        graph.render( "png", function(render) {
-          img = '<img src="data:image/png;base64,'+render.toString("base64")+'"/>'
-          res.send(img)
-        }, function(code, out, err) {
-          img = '<div class="error"><p><b>Render error (code '+code+')</b></p>';
-          img += '<p>STDOUT : '+out+'</p>';
-          img += '<p>STDERR : '+err+'</p></div>';
-          res.send(img)
-        });
-      }, function(code, out, err){
-        img = '<div class="error"><p><b>Parser error (code '+code+')</b></p>';
-        img += '<p>STDERR : '+err+'</p></div>';
-        img += '<p>STDOUT : '+out+'</p></div>';
-        res.send(img)
-      });
-    });
+// APIs -----------------------------------------------------------------------
+
+app.get('/dotgraph.min.js', function(req,res) {
+  fs.readFile(__dirname+'/static/dotgraph.js', function (err, data) {
+    if (err) throw err;
+    res.contentType('text/javascript');
+    res.send( jsmin(data.toString('utf8') ) );
   });
 })
 
-app.get('/draw/*', function(req,res){
+function __do( req, res, data ) {
+  graphviz.parse( data, function(graph) {
+    graph.render( "png", function(render) {
+      img = '<img src="data:image/png;base64,'+render.toString("base64")+'"/>'
+      res.send(img)
+    }, function(code, out, err) {
+      img = '<div class="error"><p><b>Render error (code '+code+')</b></p>';
+      img += '<p>STDOUT : '+out+'</p>';
+      img += '<p>STDERR : '+err+'</p></div>';
+      res.send(img)
+    });
+  }, function(code, out, err){
+    img = '<div class="error"><p><b>Parser error (code '+code+')</b></p>';
+    img += '<p>STDERR : '+err+'</p></div>';
+    img += '<p>STDOUT : '+out+'</p></div>';
+    res.send(img)
+  });  
+}
+
+app.post('/script', function(req,res){
+  __do(req, res, req.body.data)
+})
+
+app.get('/file/*', function(req,res){
   var urlData = url.parse(req.params[0]);
   
   var urlPort = urlData.port;
@@ -62,27 +80,7 @@ app.get('/draw/*', function(req,res){
       res.send('<div class="error"><p><b>'+req.params[0]+'</b> does not exist (404 error)</p></div>');
     } else {
       response.on('data', function (chunk) {
-        temp.open('dotGraph', function(err, info) {
-          fs.write(info.fd, chunk);
-          fs.close(info.fd, function(err) {
-            graphviz.parse( info.path, function(graph) {
-              graph.render( "png", function(render) {
-                img = '<img src="data:image/png;base64,'+render.toString("base64")+'"/>'
-                res.send(img)
-              }, function(code, out, err) {
-                img = '<div class="error"><p><b>Render error (code '+code+')</b></p>';
-                img += '<p>STDOUT : '+out+'</p>';
-                img += '<p>STDERR : '+err+'</p></div>';
-                res.send(img)
-              });
-            }, function(code, out, err){
-              img = '<div class="error"><p><b>Parser error (code '+code+')</b></p>';
-              img += '<p>STDERR : '+err+'</p></div>';
-              img += '<p>STDOUT : '+out+'</p></div>';
-              res.send(img)
-            });
-          });
-        });
+        __do(req, res, chunk)
       });
     }
   });

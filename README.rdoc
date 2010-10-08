@@ -19,6 +19,7 @@ Interface to the GraphViz graphing tool
 * Major correction in parse : error callback now take three arguments : code, stdout, stderr
 * Major bugs corrections
 * Update Attributs class
+* parse now accept a file or a script
 
 === 0.0.3 :
 
