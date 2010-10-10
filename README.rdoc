@@ -20,6 +20,7 @@ Interface to the GraphViz graphing tool
 * Major bugs corrections
 * Update Attributs class
 * parse now accept a file or a script
+* Update render (see tests/hello.js)
 
 === 0.0.3 :
 
