@@ -19,3 +19,25 @@ task('doc', [], function () {
       }
   });
 });
+
+desc('Install');
+task('install', [], function() {
+	child = exec('npm install .',
+		function(error, stdout, stderr) {
+			if (error !== null) {
+				console.log('exec error: ' + error);
+			}
+		}
+	);
+});
+
+desc('Publish');
+task('publish', [], function() {
+	child = exec('npm publish .',
+		function(error, stdout, stderr) {
+			if (error !== null) {
+				console.log('exec error: ' + error);
+			}
+		}
+	);
+});
