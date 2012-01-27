@@ -15,7 +15,7 @@ Interface to the GraphViz graphing tool
 == CHANGELOG
 
 === 0.0.6 :
-
+* Tiny corrections
 
 === 0.0.5 :
 * graphviz.js: Don't require the 'sys' module.
