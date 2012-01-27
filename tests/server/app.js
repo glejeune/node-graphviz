@@ -1,5 +1,5 @@
 var fs = require('fs');
-var sys = require('sys');
+var util = require('util');
 var http = require('http');
 var url = require('url');
 
@@ -17,8 +17,8 @@ var jsmin = require('jsmin').jsmin;
 
 app.set('views', __dirname + '/views');
 app.configure(function(){ 
-  app.use(express.bodyDecoder());
-  app.use(express.staticProvider(__dirname + '/static'));
+  app.use(express.bodyParser());
+  app.use(express.static(__dirname + '/static'));
 })
 
 // Site -----------------------------------------------------------------------

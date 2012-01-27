@@ -1,4 +1,4 @@
-var sys = require('sys'),
+var util = require('util'),
 	graphviz = require('../lib/graphviz');
 
 graphviz.parse( "cluster.dot", function(graph) {

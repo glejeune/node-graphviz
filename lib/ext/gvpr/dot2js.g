@@ -50,7 +50,7 @@ BEGIN {
 }
 
 BEG_G {
-  printf( "var sys = require('sys'),\n  graphviz = require('graphviz');\n\n");
+  printf( "var util = require('util'),\n  graphviz = require('graphviz');\n\n");
   // Directed 
   g_direct = isDirect($);
   if( g_direct == 0 ) {
