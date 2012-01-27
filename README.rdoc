@@ -15,6 +15,7 @@ Interface to the GraphViz graphing tool
 == CHANGELOG
 
 === 0.0.5 :
+* graphviz.js: Don't require the 'sys' module.
 
 === 0.0.4 :
 * Major correction in render : error callback now take three arguments : code, stdout, stderr
