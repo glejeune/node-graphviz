@@ -45,7 +45,7 @@ Interface to the GraphViz graphing tool
 
 A basic example
 
-  var sys = require('sys'),
+  var util = require('util'),
     graphviz = require('graphviz');
 
   // Create digraph G

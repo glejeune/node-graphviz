@@ -1,6 +1,6 @@
 // This file is a node-jake file -- http://github.com/mde/node-jake
 
-var sys = require('sys'),
+var util = require('util'),
 	exec  = require('child_process').exec,
 	child;
 
