@@ -14,6 +14,10 @@ Interface to the GraphViz graphing tool
 
 == CHANGELOG
 
+=== 0.0.7 :
+* Issue #6 : fixed some calls to "sys"
+* Issue #7 : Fixed so it can be installed on v0.8 (by Patrik Henningsson <https://github.com/pahen>)
+
 === 0.0.6 :
 * Tiny corrections
 
