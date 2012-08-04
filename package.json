@@ -1,6 +1,6 @@
 {
    "name" : "graphviz",
-   "version" : "0.0.7",
+   "version" : "0.0.8",
    "author": "Gregoire Lejeune <gregoire.lejeune@free.fr> (http://algorithmique.net/)",
    "description" : "Node.js interface to the GraphViz graphing tool",
    "homepage" : "http://algorithmique.net/",
