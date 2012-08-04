@@ -81,7 +81,7 @@ A basic example
 
 Or :
 
-  $ npm install node-graphviz
+  $ npm install graphviz
 
 You also need to install GraphViz[http://www.graphviz.org]
 
