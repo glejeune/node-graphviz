@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/glejeune/node-graphviz.png)](http://travis-ci.org/glejeune/node-graphviz)
 = Node.js GraphViz Module
 
 Copyright (C) 2010 Gregoire Lejeune
