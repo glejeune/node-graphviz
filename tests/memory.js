@@ -6,8 +6,8 @@ var g = graphviz.digraph("G");
 
 // Add node (ID: Hello)
 var n1 = g.addNode( "Hello" );
-n1.set( "color", "blue" );
-n1.set( "style", "filled" );
+n1.set( "color", "blue" )
+  .set( "style", "filled" );
 
 // Add node (ID: World)
 g.addNode( "World" );

@@ -13,8 +13,10 @@ n1.set( "style", "filled" );
 g.addNode( "World" );
 
 // Add edge between the two nodes
-var e = g.addEdge( n1, "World" );
-e.set( "color", "red" );
+g.addEdge(n1, "World")
+  .set("color", "red")
+  .set("label", "A label")
+  .set("fontsize", "10");
 
 // Generate a PNG output
 g.output( "png", "hello_world.png" );
