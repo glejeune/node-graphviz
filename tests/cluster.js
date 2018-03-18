@@ -10,8 +10,8 @@ cluster_0.set( "style", "filled" );
 // 		color=lightgrey;
 cluster_0.set( "color", "lightgrey" );
 // 		node [style=filled,color=white];
-cluster_0.setNodeAttribut( "style", "filled" )
-cluster_0.setNodeAttribut( "color", "white" )
+cluster_0.setNodeAttribute( "style", "filled" )
+cluster_0.setNodeAttribute( "color", "white" )
 
 // 		a0 -> a1 -> a2 -> a3;
 cluster_0.addEdge( "a0", "a1" );
@@ -24,7 +24,7 @@ cluster_0.set( "label", "process #1" )
 // 	subgraph cluster_1 {
 var cluster_1 = g.addCluster("cluster_1");
 // 		node [style=filled];
-cluster_1.setNodeAttribut( "style", "filled" )
+cluster_1.setNodeAttribute( "style", "filled" )
 
 // 		b0 -> b1 -> b2 -> b3;
 cluster_1.addEdge( "b0", "b1" );
