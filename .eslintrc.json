@@ -1,0 +1,32 @@
+{
+  "root": true,
+  "extends": ["airbnb-base", "prettier", "plugin:promise/recommended", "plugin:node/recommended"],
+  "env": {
+    "node": true
+  },
+  "plugins": ["promise"],
+  "rules": {
+    "global-require": "off",
+    "vars-on-top": "off",
+    "dot-notation": "off",
+    "guard-for-in": "off",
+    "func-names": "off",
+    "one-var": "off",
+    "no-underscore-dangle": "off",
+    "no-plusplus": "off",
+    "no-process-exit": "off",
+    "no-bitwise": "off",
+    "no-extend-native": "off",
+    "handle-callback-err": ["error", "^(err|error)$"],
+    "camelcase": ["error", { "properties": "never" }],
+    "no-use-before-define": ["error", "nofunc"],
+    "no-mixed-requires": ["warn", { "grouping": true }],
+    "id-length": ["warn", { "min": 2, "exceptions": ["i", "_"] }],
+    "no-unused-expressions": ["error", { "allowShortCircuit": true }],
+    "no-param-reassign": ["warn"],
+    "no-unused-vars": ["error", { "varsIgnorePattern": "^_.+", "argsIgnorePattern": "^_" }]
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018
+  }
+}
