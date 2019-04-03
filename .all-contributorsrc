@@ -1,0 +1,97 @@
+{
+  "projectName": "node-graphviz",
+  "projectOwner": "glejeune",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "glejeune",
+      "name": "Gregoire Lejeune",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/15168?v=4",
+      "profile": "http://lejeun.es",
+      "contributions": [
+        "code",
+        "doc",
+        "example"
+      ]
+    },
+    {
+      "login": "dariusk",
+      "name": "Darius Kazemi",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/266454?v=4",
+      "profile": "https://tinysubversions.com",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "SebastienElet",
+      "name": "Sébastien ELET",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/541937?v=4",
+      "profile": "https://github.com/SebastienElet",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "papandreou",
+      "name": "Andreas Lind",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/373545?v=4",
+      "profile": "https://github.com/papandreou",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "blakmatrix",
+      "name": "Farrin Reid",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/91209?v=4",
+      "profile": "http://www.blakmatrix.com",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "pahen",
+      "name": "Patrik Henningsson",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/353888?v=4",
+      "profile": "https://pahen.se",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "pooriaazimi",
+      "name": "Pooria Azimi",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/814637?v=4",
+      "profile": "https://github.com/pooriaazimi",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "BridgeAR",
+      "name": "Ruben Bridgewater",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/8822573?v=4",
+      "profile": "https://twitter.com/BridgeAR",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "mathieuravaux",
+      "name": "Mathieu Ravaux",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/38495?v=4",
+      "profile": "https://github.com/mathieuravaux",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
