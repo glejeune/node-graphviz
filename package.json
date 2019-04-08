@@ -4,7 +4,7 @@
   "author": "Gregoire Lejeune <gregoire.lejeune@free.fr> (http://algorithmique.net/)",
   "description": "Node.js interface to the GraphViz graphing tool",
   "homepage": "http://algorithmique.net/",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "contributors": [
     "Gregoire Lejeune (http://algorithmique.net)",
     "Mathieu Ravaux (http://mathieuravaux.com)"
