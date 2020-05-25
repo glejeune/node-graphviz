@@ -14,9 +14,9 @@ Interface to the GraphViz graphing tool
 
 A basic example
 
-```
+```javascript
 var util = require('util'),
-  graphviz = require('graphviz');
+    graphviz = require('graphviz');
 
 // Create digraph G
 var g = graphviz.digraph("G");
@@ -47,11 +47,11 @@ g.output( "png", "test01.png" );
 $ npm install graphviz
 ```
 
-You also need to install GraphViz[http://www.graphviz.org]
+You also need to install [GraphViz](http://www.graphviz.org)
 
 ## DOCUMENTATION
 
-Install node-jake[http://github.com/mde/node-jake] and dox[http://github.com/visionmedia/dox] then run
+Install [node-jake](http://github.com/mde/node-jake) and [dox](http://github.com/visionmedia/dox), then run
 
 ```
 jake doc && open documentation.html
