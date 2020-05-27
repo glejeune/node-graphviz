@@ -51,10 +51,11 @@ You also need to install [GraphViz](http://www.graphviz.org)
 
 ## DOCUMENTATION
 
-Install [node-jake](http://github.com/mde/node-jake) and [dox](http://github.com/visionmedia/dox), then run
+To build the documentation:
 
-```
-jake doc && open documentation.html
+```bash
+npm install -g jake dox
+jake doc & open documentation.json
 ```
 
 ## AUTHORS
